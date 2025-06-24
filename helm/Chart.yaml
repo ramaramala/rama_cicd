@@ -1,0 +1,4 @@
+apiVersion: v2
+name: rama_cicd
+description: A Helm chart for deploying rama_cicd
+version: 0.1.0

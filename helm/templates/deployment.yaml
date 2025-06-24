@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rama_cicd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rama_cicd
+  template:
+    metadata:
+      labels:
+        app: rama_cicd
+    spec:
+      containers:
+        - name: rama_cicd
+          image: your-docker-image
+          ports:
+            - containerPort: 8080
