@@ -5,6 +5,7 @@ metadata:
  description: Team owning microservices and platform infra
 spec:
  type: team
- members:
-   - user:rama
+   # members:
+   #- user:rama
+ children: [rama, rama1]
 
