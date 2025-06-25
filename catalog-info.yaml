@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+ name: rama-micro
+ description: A Flask microservice with CI/CD and observability
+ annotations:
+   github.com/project-slug: ramaramala/rama_cicd
+   backstage.io/techdocs-ref: dir:.
+   prometheus.io/scrape: "true"
+   loki.io/logs: "true"
+spec:
+ type: service
+ lifecycle: experimental
+ owner: platform-team
+
