@@ -1,0 +1,6 @@
+site_name: rama-micro
+nav:
+  - Home: index.md
+plugins:
+  - techdocs-core
+
