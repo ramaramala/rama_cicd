@@ -9,7 +9,12 @@ metadata:
    prometheus.io/scrape: "true"
    loki.io/logs: "true"
 spec:
- type: service
- lifecycle: experimental
- owner: platform-team
-
+  type: service
+  lifecycle: experimental
+  # lifecycle: production
+  # lifecycle: depreciated
+  owner: group:platform-team
+dependsOn:
+  - component:default/example-website
+  # dependencyOf:
+  # - component:default/artist-web-lookup
