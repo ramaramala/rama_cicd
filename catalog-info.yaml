@@ -3,9 +3,16 @@ kind: Component
 metadata:
  name: rama-micro
  description: A Flask microservice with CI/CD and observability
+ tags:
+    - flask
+    - python
+    - prometheus
+    - demo 
  annotations:
    github.com/project-slug: ramaramala/rama_cicd
    backstage.io/techdocs-ref: dir:.
+   grafana/dashboard-url: http://3.86.212.42:3001/d/ae788b8d-3ad8-4124-a55d-a4526a6e846c/count
+   grafana/dashboard-selector: rama-cicd
    prometheus.io/scrape: "true"
    loki.io/logs: "true"
 spec:
@@ -14,6 +21,7 @@ spec:
   # lifecycle: production
   # lifecycle: depreciated
   owner: group:platform-team
+  system: rama-platform
 dependsOn:
   - component:default/example-website
   # dependencyOf:
