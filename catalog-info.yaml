@@ -11,7 +11,7 @@ metadata:
  annotations:
    github.com/project-slug: ramaramala/rama_cicd
    backstage.io/techdocs-ref: dir:.
-   grafana/dashboard-url: http://3.86.212.42:3001/d/ae788b8d-3ad8-4124-a55d-a4526a6e846c/rama-micro?orgId=1&from=now-6h&to=now&timezone=browser
+   grafana/dashboard-url: http://44.210.117.79:3001/d/ae788b8d-3ad8-4124-a55d-a4526a6e846c/rama-micro?orgId=1&from=now-6h&to=now&timezone=browser 
    grafana/dashboard-selector: rama_cicd
    prometheus.io/scrape: "true"
    loki.io/logs: "true"
