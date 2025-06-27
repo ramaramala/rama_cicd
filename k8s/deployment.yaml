@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: raman-micro
+  name: rama_cicd
   labels:
-    app: raman-micro
+    app: rama_cicd
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: raman-micro
+      app: rama_cicd
   template:
     metadata:
       labels:
-        app: raman-micro
+        app: rama_cicd
     spec:
       containers:
-        - name: raman-micro
-          image: docker.io/raman/raman-micro:latest
+        - name: rama_cicd
+          image: docker.io/raman/rama_cicd:latest
           ports:
             - containerPort: 5000
           resources:
