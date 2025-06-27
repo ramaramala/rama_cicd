@@ -1,28 +1,23 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
- name: rama-micro
- description: A Flask microservice with CI/CD and observability
- tags:
-    - flask
-    - python
-    - prometheus
-    - demo 
- annotations:
-   github.com/project-slug: ramaramala/rama_cicd
-   backstage.io/techdocs-ref: dir:.
-   grafana/dashboard-url: http://44.210.117.79:3001/d/ae788b8d-3ad8-4124-a55d-a4526a6e846c/rama-micro?orgId=1&from=now-6h&to=now&timezone=browser 
-   grafana/dashboard-selector: rama_micro
-   prometheus.io/scrape: "true"
-   loki.io/logs: "true"
+  name: rama_cicd
+  description: A Flask microservice with CI/CD and observability
+  annotations:
+    github.com/project-slug: ramaramala/rama_cicd
+    backstage.io/techdocs-ref: dir:.
+    prometheus.io/scrape: "true"
+    loki.io/logs: "true"
+    grafana/dashboard-url: http://44.210.117.79:3001/d/ae788b8d-3ad8-4124-a55d-a4526a6e846c/rama-micro?orgId=1&from=now-6h&to=now&timezone=browser 
+    grafana/dashboard-selector: rama_cicd
+      #grafana/dashboard-selector: 'tag=raman-micro'
+      #grafana/tag-selector: raman-micro
 spec:
   type: service
   lifecycle: experimental
-  # lifecycle: production
-  # lifecycle: depreciated
-  owner: platform-team
-  system: rama-platform
-dependsOn:
-  - component:default/example-website
-  # dependencyOf:
-  # - component:default/artist-web-lookup
+# lifecycle: production
+# lifecycle: depreciated
+  owner: group:platform-team
+  dependsOn:
+    - component:default/example-website
+# dependencyOf:
