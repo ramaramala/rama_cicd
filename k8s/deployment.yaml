@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: raman-micro
+  labels:
+    app: raman-micro
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: raman-micro
+  template:
+    metadata:
+      labels:
+        app: raman-micro
+    spec:
+      containers:
+        - name: raman-micro
+          image: docker.io/raman/raman-micro:latest
+          ports:
+            - containerPort: 5000
+          resources:
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
+
