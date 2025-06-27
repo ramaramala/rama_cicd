@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: rama_cicd
-          image: docker.io/raman/rama_cicd:latest
+          image: docker.io/rama/rama_cicd:latest
           ports:
             - containerPort: 5000
           resources:
